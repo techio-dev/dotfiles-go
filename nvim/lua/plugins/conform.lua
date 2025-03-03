@@ -3,6 +3,7 @@ return {
   "stevearc/conform.nvim",
   optional = true,
   opts = function(_, opts)
+    opts.formatters_by_ft.go = { "goimports", "gofumpt", "golines" }
     opts.formatters.sqlfluff = {
       args = { "format", "--dialect=ansi", "-" },
     }
